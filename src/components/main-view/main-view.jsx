@@ -18,13 +18,13 @@ export class MainView extends React.Component {
                     _id: 2, 
                     Title: 'The Shawshank Redemption', 
                     Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', 
-                    ImagePath: path + 'shawshank.jpg'
+                    ImagePath: '../../../img/shawshank'
                 },
                 { 
                     _id: 3, 
                     Title: 'Gladiator', 
                     Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.', 
-                    ImagePath: path + 'gladiator.jpg'
+                    ImagePath: '../../../img/gladiator'
                 }
             ],
             selectedMovie: null
