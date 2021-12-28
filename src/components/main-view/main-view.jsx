@@ -10,26 +10,7 @@ export class MainView extends React.Component {
     constructor(){
         super();
         this.state = {
-            movies: [
-                // { 
-                //     _id: 1, 
-                //     Title: 'Inception', 
-                //     Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.', 
-                //     ImagePath: '../../../img/inception'
-                // },
-                // { 
-                //     _id: 2, 
-                //     Title: 'The Shawshank Redemption', 
-                //     Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', 
-                //     ImagePath: '../../../img/shawshank'
-                // },
-                // { 
-                //     _id: 3, 
-                //     Title: 'Gladiator', 
-                //     Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.', 
-                //     ImagePath: '../../../img/gladiator'
-                // }
-            ],
+            movies: [],
             selectedMovie: null,
             user: null
         };
