@@ -65,7 +65,7 @@ export function RegistrationView(props) {
                   </Form.Control>
                   </Form.Group>
 
-                  <Button variant='primary' type="submit" onClick={handleSubmit}>Submit</Button>
+                  <Button className='btn-reg' variant='primary' type="submit" onClick={handleSubmit}>Submit</Button>
                 </Form>
               </Card.Body>
             </Card>

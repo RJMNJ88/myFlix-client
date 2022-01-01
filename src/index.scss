@@ -1,5 +1,20 @@
-$color: steelblue;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
-.my-flix {
-  color: $color;
+$blue: #1977A5;
+$light-blue: #81C3E3;
+$grey: #6D797F;
+$light-grey: #B7BBBC;
+$white: #FCFDFE;
+$border: .2rem solid black;
+$box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  padding: 2rem;
+  scroll-behavior: smooth;
 }
