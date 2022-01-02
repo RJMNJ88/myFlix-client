@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card, CardGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -15,33 +16,29 @@ export function LoginView(props) {
   };
 
   return (
-    <Form>
+    <CardGroup>
+      <Card className='log-card'>
+        <Card.Body>
+          <Card.Title className='log-title'>Login</Card.Title>
+            <Form className='log-form'>
+              <Form.Group controlId='formUsername'>
+                <Form.Label className='log-label'>Username:</Form.Label>
+                <Form.Control className='log-input' type='text' onChange={e => setUsername(e.target.value)} />
+              </Form.Group>
 
-      <Form.Group controlId='formUsername'>
-        <Form.Label>Username:</Form.Label>
-        <Form.Control type='text' onChange={e => setUsername(e.target.value)} />
-      </Form.Group>
+              <Form.Group controlId='formPassword'>
+              <Form.Label  className='log-label'>Password:</Form.Label>
+              <Form.Control className='log-input' type='password' onChange={e => setPassword(e.target.value)} />
+              </Form.Group>
 
-      <Form.Group controlId='formPassword'>
-      <Form.Label>Password:</Form.Label>
-      <Form.Control type='password' onChange={e => setPassword(e.target.value)} />
-      </Form.Group>
+              <Button className='log-btn' variant='primary' type='submit' onClick={handleSubmit}>
+                Submit
+              </Button>
 
-      <Button variant='primary' type='submit' onClick={handleSubmit}>
-        Submit
-      </Button>
-      
-    </Form>
-    // <form>
-    //   <label>
-    //     Username:
-    //     <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-    //   </label>
-    //   <label>
-    //     Password:
-    //     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-    //   </label>
-    //   <button type="submit" onClick={handleSubmit}>Submit</button>
-    // </form>
+            </Form>
+        </Card.Body>
+      </Card>
+    </CardGroup>
+    
   );
 }

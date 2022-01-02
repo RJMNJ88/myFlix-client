@@ -17,4 +17,14 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 html {
   padding: 2rem;
   scroll-behavior: smooth;
+  background: $white;
 }
+
+.app-container {
+  justify-content: center;
+  background: $grey;
+  padding: 2rem;
+  border: .3rem solid $light-blue;
+  border-radius: 1.5rem;
+}
+

@@ -1,40 +1,41 @@
-.log-card {
+.reg-card {
   border: 0.2rem solid #B7BBBC;
   border-radius: 1.5rem;
 }
 
-.log-title {
+.reg-title {
   color: #1977A5;
 }
 
-.log-title:hover {
+.reg-title:hover {
   -webkit-transform: translateX(1.5rem);
           transform: translateX(1.5rem);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
 
-.log-label {
+.reg-label {
   margin-top: .5rem;
   color: #6D797F;
 }
 
-.log-label:hover {
+.reg-label:hover {
   -webkit-transform: translateX(1.5rem);
           transform: translateX(1.5rem);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
 
-.log-btn {
+.reg-btn {
   margin-top: .5rem;
   background: #1977A5;
 }
 
-.log-btn:hover {
+.reg-btn:hover {
   background: #1977A5;
   opacity: 0.8;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
-/*# sourceMappingURL=login-view.css.map */
+
+/*# sourceMappingURL=index.98d588f0.css.map */

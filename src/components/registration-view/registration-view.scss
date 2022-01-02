@@ -1,0 +1,43 @@
+$blue: #1977A5;
+$light-blue: #81C3E3;
+$grey: #6D797F;
+$light-grey: #B7BBBC;
+$white: #FCFDFE;
+$border: .2rem solid black;
+$box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
+
+.reg-card {
+    border: .2rem solid $light-grey;
+    border-radius: 1.5rem;
+}
+
+.reg-title {
+    color: $blue;
+    
+    &:hover {
+        transform: translateX(1.5rem);
+        transition: all .2s ease;
+    }
+}
+
+.reg-label {
+    margin-top: .5rem;
+    color: $grey;
+
+    &:hover {
+        transform: translateX(1.5rem);
+        transition: all .2s ease;    
+    }
+}
+
+.reg-btn {
+    margin-top: .5rem;
+    background: $blue;
+
+    &:hover {
+        background: $blue;
+        opacity: 0.8;
+        transition: all .2s ease;
+    }
+}
+

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Form, Button, Card, CardGroup, Container, Col, Row} from 'react-bootstrap';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
 
 export function RegistrationView(props) {
   const [ username, setUsername ] = useState('');
@@ -19,15 +18,16 @@ export function RegistrationView(props) {
   return (
     <Container>
       <Row>
-        <Col>
-          <CardGroup>
-            <Card>
+        <Col justify-content-md-center>
+          <CardGroup >
+            <Card className='reg-card'>
               <Card.Body>
-                <Card.Title>Please Register</Card.Title>
+                <Card.Title className='reg-title'>Please Register</Card.Title>
                 <Form>
                   <Form.Group>
-                  <Form.Label>Username:</Form.Label>
-                    <Form.Control 
+                  <Form.Label className='reg-label'>Username:</Form.Label>
+                    <Form.Control
+                    className='reg-input' 
                     type="text" 
                     value={username} 
                     onChange={e => setUsername(e.target.value)}
@@ -36,8 +36,9 @@ export function RegistrationView(props) {
                   </Form.Group>
 
                   <Form.Group>
-                  <Form.Label>Password:</Form.Label>
+                  <Form.Label className='reg-label'>Password:</Form.Label>
                   <Form.Control 
+                    className='reg-input'
                     type="password" 
                     value={password} 
                     onChange={e => setPassword(e.target.value)}
@@ -46,8 +47,9 @@ export function RegistrationView(props) {
                   </Form.Group>
 
                   <Form.Group>
-                  <Form.Label>Email:</Form.Label>
-                  <Form.Control 
+                  <Form.Label className='reg-label'>Email:</Form.Label>
+                  <Form.Control
+                    className='reg-input' 
                     type="email" 
                     value={email} 
                     onChange={e => setEmail(e.target.value)}
@@ -56,8 +58,9 @@ export function RegistrationView(props) {
                   </Form.Group>
 
                   <Form.Group>
-                  <Form.Label>Date of Birth:</Form.Label>
-                  <Form.Control 
+                  <Form.Label className='reg-label'>Date of Birth:</Form.Label>
+                  <Form.Control
+                    className='reg-input' 
                     type="date" 
                     value={birthday} 
                     onChange={e => setBirthday(e.target.value)}
@@ -65,7 +68,7 @@ export function RegistrationView(props) {
                   </Form.Control>
                   </Form.Group>
 
-                  <Button className='btn-reg' variant='primary' type="submit" onClick={handleSubmit}>Submit</Button>
+                  <Button className='reg-btn' variant='primary' type="submit" onClick={handleSubmit}>Submit</Button>
                 </Form>
               </Card.Body>
             </Card>
