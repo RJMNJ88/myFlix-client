@@ -3,11 +3,33 @@
   border: 0.2rem solid #FCFDFE;
   border-radius: .5rem;
   background: #B7BBBC;
+  height: 45rem;
+  overflow-y: hidden;
+}
+
+.movie-card .card-img {
+  height: 20rem;
+  min-height: 20rem;
+}
+
+.movie-card .card-title {
+  max-height: 15rem;
+  overflow-y: hidden;
+}
+
+.movie-card .card-text {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 12rem;
+  overflow-y: hidden;
 }
 
 .movie-card .card-btn {
   margin: 0;
   padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1.5rem;
   color: #1977A5;
 }
 

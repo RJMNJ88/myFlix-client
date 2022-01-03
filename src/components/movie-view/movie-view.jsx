@@ -9,12 +9,10 @@ export class MovieView extends React.Component {
         return (
 
             <CardGroup className='view-card'>
-                <Card>
-                    <Card.Body>
+                <Card className='card'>
+                    <Card.Body className='card-body'>
+                        <Card.Img className='view-img' variant='top' src={movie.ImagePath} crossOrigin='anonymous' />
                         <div className="movie-view">
-                            <div className="movie-poster">
-                                <img src={movie.ImagePath} crossOrigin='anonymous'/>
-                            </div>
                             <div className="movie-title">
                                 <span className="label">Title: </span>
                                 <span className="value">{movie.Title}</span>

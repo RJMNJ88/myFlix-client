@@ -5,6 +5,11 @@
   background: #FCFDFE;
 }
 
+.view-card .view-img {
+  max-height: 40rem;
+  margin-bottom: 1rem;
+}
+
 .movie-title {
   border-top: 0.1rem dashed #B7BBBC;
   border-bottom: 0.1rem dashed #B7BBBC;

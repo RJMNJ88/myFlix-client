@@ -5,20 +5,45 @@ $light-grey: #B7BBBC;
 $white: #FCFDFE;
 $border: .2rem solid black;
 $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
+$box-shadow-white: .5rem 1rem 1rem $white;
 
 .movie-card {
     margin: .5rem;
     border: .2rem solid $white;
     border-radius: .5rem;
     background: $light-grey;
+    height: 45rem;
+    overflow-y: hidden;
     // max-height: 25rem;
     // min-height: 25rem;
     // overflow-y: hidden;
-    // justify-content: left;   
+    // justify-content: left; 
+    
+    .card-img {
+        height: 20rem;
+        min-height: 20rem;
+        // margin-bottom: .5rem;
+        // border: .1rem solid $white;
+        // border-radius: .3rem;
+        // box-shadow: $box-shadow-white;
+    }
 
+    .card-title {
+        max-height: 15rem;
+        overflow-y: hidden;
+    }
+
+    .card-text {
+        position: sticky;
+        height: 12rem;
+        overflow-y: hidden;
+    }
+    
     .card-btn {
         margin: 0;
         padding: 0;
+        position: sticky;
+        bottom: 1.5rem;
         color: $blue;
     }
 }

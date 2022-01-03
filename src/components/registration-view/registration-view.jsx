@@ -18,7 +18,7 @@ export function RegistrationView(props) {
   return (
     <Container>
       <Row>
-        <Col justify-content-md-center>
+        <Col md={{ span: 8, offset: 2 }}>
           <CardGroup >
             <Card className='reg-card'>
               <Card.Body>

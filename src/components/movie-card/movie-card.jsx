@@ -13,8 +13,8 @@ export class MovieCard extends React.Component {
                 <Card.Body className='card-body'>
                     <Card.Title className='card-title' >{movie.Title}</Card.Title>
                     <Card.Text className='card-text'>{movie.Description}</Card.Text>
-                    <Button className='card-btn' onClick={() => onMovieClick(movie)} variant='link'>View Film</Button>
                 </Card.Body>
+                <Button className='card-btn' onClick={() => onMovieClick(movie)} variant='link'>View Film</Button>
             </Card>
         );
     }

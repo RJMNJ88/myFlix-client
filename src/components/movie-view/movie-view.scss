@@ -11,6 +11,19 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
     border: .2rem solid $light-grey;
     border-radius: .5rem;
     background: $white;
+    // max-width: 30rem;
+
+    .view-img {
+        max-height: 40rem;
+        margin-bottom: 1rem;
+    }
+
+    .card {
+
+        .card-body {
+
+        }
+    }
 }
 
 .movie-title {
