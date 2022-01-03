@@ -13,7 +13,7 @@ export class MovieView extends React.Component {
                     <Card.Body>
                         <div className="movie-view">
                             <div className="movie-poster">
-                                <img src={movie.ImagePath} />
+                                <img src={movie.ImagePath} crossOrigin='anonymous'/>
                             </div>
                             <div className="movie-title">
                                 <span className="label">Title: </span>
