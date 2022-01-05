@@ -15,6 +15,24 @@ export function RegistrationView(props) {
     props.onRegistered(username);
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   /* Send a request to the server for authentication */
+  //   axios.post('https://blooming-wildwood-80599.herokuapp.com/register', {
+  //     Username: username,
+  //     Password: password,
+  //     Email: email,
+  //     Birthday: birthday
+  //   })
+  //   .then(response => {
+  //     const data = response.data;
+  //     props.onRegistered(data);
+  //   })
+  //   .catch(e => {
+  //     console.log('Could not register user.')
+  //   });
+  // };
+
   return (
     <Container>
       <Row>
