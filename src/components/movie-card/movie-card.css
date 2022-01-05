@@ -3,8 +3,17 @@
   border: 0.2rem solid #FCFDFE;
   border-radius: .5rem;
   background: #B7BBBC;
-  height: 45rem;
+  height: 36rem;
   overflow-y: hidden;
+}
+
+.movie-card:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-box-shadow: 0 0 3rem #FCFDFE;
+          box-shadow: 0 0 3rem #FCFDFE;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 .movie-card .card-img {
@@ -13,15 +22,17 @@
 }
 
 .movie-card .card-title {
-  max-height: 15rem;
-  overflow-y: hidden;
+  height: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .movie-card .card-text {
-  position: -webkit-sticky;
-  position: sticky;
-  height: 12rem;
-  overflow-y: hidden;
+  height: 9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .movie-card .card-btn {
@@ -29,7 +40,7 @@
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 1.5rem;
+  bottom: .5rem;
   color: #1977A5;
 }
 /*# sourceMappingURL=movie-card.css.map */
