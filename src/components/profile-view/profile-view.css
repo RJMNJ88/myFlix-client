@@ -1,0 +1,61 @@
+.profile {
+  margin-bottom: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.update-profile {
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.edit-btns {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.update-btn {
+  width: 9rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background: #1977A5;
+}
+
+.update-btn:hover {
+  background: #1977A5;
+  color: #FFBC35;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.delete-btn {
+  width: 9rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background: #1977A5;
+}
+
+.delete-btn:hover {
+  background: #1977A5;
+  color: #C20000;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.back-btn {
+  margin-top: .5rem;
+  background: #1977A5;
+}
+
+.back-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+/*# sourceMappingURL=profile-view.css.map */

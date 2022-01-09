@@ -2,7 +2,9 @@ import React from "react";
 import {ListGroup, Navbar, Container, Nav, Button } from 'react-bootstrap'
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 
-export function Menubar({user}) {
+import './navbar.css'
+
+export function NavView({user}) {
 
   const onLoggedOut = () => {
     localStorage.clear();
@@ -21,14 +23,14 @@ export function Menubar({user}) {
   }
     
   return (
-    <Navbar className="main-nav" sticky='top'>
+    <Navbar className="main-nav" fixed='top'>
       <Container>
         <Navbar.Brand className="navbar-logo" href="/">myFilms</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className="ml-auto" >
-              {isAuth() && (<Nav.Link href={`/users/${user}`}>{user}</Nav.Link>)}
-              {isAuth() && (<Button variant='link' onClick={() => {this.onLoggedOut()}}>logout</Button>)}
+            <Nav className="links ml-auto" >
+              {isAuth() && (<Nav.Link className="user-btn" href={`/users/${user}`}>{user}</Nav.Link>)}
+              {isAuth() && (<Button className="logout-btn" variant='btn' onClick={() => {this.onLoggedOut()}}>logout</Button>)}
               {!isAuth() && (<Nav.Link href="/">sign-in</Nav.Link>)}
               {!isAuth() && (<Nav.Link href="/register">sign-up</Nav.Link>)}
             </Nav>

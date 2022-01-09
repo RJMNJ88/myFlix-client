@@ -1,0 +1,71 @@
+$blue: #1977A5;
+$light-blue: #81C3E3;
+$grey: #6D797F;
+$light-grey: #B7BBBC;
+$white: #FCFDFE;
+$yellow: #FFBC35;
+$red: #C20000;
+$border: .2rem solid black;
+$box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
+
+// .profile-col {
+//     height: 10rem;
+// }
+
+.profile {
+    margin-bottom: .5rem;
+    border: .2rem solid $light-grey;
+    border-radius: .5rem;
+    background: $white;
+}
+
+.update-profile {
+    border: .2rem solid $light-grey;
+    border-radius: .5rem;
+    background: $white;
+
+
+}
+
+.edit-btns {
+    justify-content: space-between;
+}
+
+.update-btn {
+    width: 9rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
+    background: $blue;
+
+    &:hover {
+        background: $blue;
+        color: $yellow;
+        opacity: 0.8;
+        transition: all .2s ease;
+    }
+}
+
+.delete-btn {
+    width: 9rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
+    background: $blue;
+
+    &:hover {
+        background: $blue;
+        color: $red;
+        opacity: 0.8;
+        transition: all .2s ease;
+    }  
+}
+
+.back-btn {
+    margin-top: .5rem;
+    background: $blue;
+
+    &:hover {
+        background: $blue;
+        opacity: 0.8;
+        transition: all .2s ease;
+    }  
+}

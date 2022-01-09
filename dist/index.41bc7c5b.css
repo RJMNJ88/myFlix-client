@@ -1,0 +1,134 @@
+/* No CSS */
+/* No CSS */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  width: 100vw;
+  background: #81C3E3;
+  padding: .5rem 0;
+}
+
+.main-nav .navbar-logo {
+  color: #6D797F;
+  font-size: 2.5rem;
+}
+
+.main-nav .navbar-logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.main-nav .links {
+  color: #6D797F;
+  font-size: 1.5rem;
+}
+
+.main-nav .links .logout-btn {
+  font-size: 1rem;
+  color: #6D797F;
+  text-transform: capitalize;
+}
+
+.main-nav .links .logout-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.main-nav .links .user-btn {
+  color: #6D797F;
+}
+
+.main-nav .links .user-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.profile {
+  margin-bottom: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.update-profile {
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.edit-btns {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.update-btn {
+  width: 9rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background: #1977A5;
+}
+
+.update-btn:hover {
+  background: #1977A5;
+  color: #FFBC35;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.delete-btn {
+  width: 9rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background: #1977A5;
+}
+
+.delete-btn:hover {
+  background: #1977A5;
+  color: #C20000;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.back-btn {
+  margin-top: .5rem;
+  background: #1977A5;
+}
+
+.back-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #FCFDFE;
+}
+.app-container {
+  min-height: 100vh;
+  justify-content: center;
+  background: #6D797F;
+  padding-top: 7rem;
+  border: 0.2rem solid #81C3E3;
+}
+/*# sourceMappingURL=index.41bc7c5b.css.map */

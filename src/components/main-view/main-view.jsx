@@ -9,8 +9,8 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
-// import { Menubar } from '../navbar/navbar';
-// import {ProfileView} from '../profile-view/profile-view';
+import { NavView } from '../navbar/navbar';
+import {ProfileView} from '../profile-view/profile-view';
 
 
 
@@ -20,9 +20,7 @@ export class MainView extends React.Component {
         super();
         this.state = {
             movies: [],
-            // selectedMovie: null,
             user: null,
-            // registered: null
         };
     }
 
@@ -51,17 +49,17 @@ export class MainView extends React.Component {
         });
     }
 
-    // setSelectedMovie(movie) {
-    //     this.setState({
-    //         selectedMovie: movie
-    //     });
-    // }
+    setSelectedMovie(movie) {
+        this.setState({
+            selectedMovie: movie
+        });
+    }
 
-    // onRegistered(registered) {
-    //     this.setState({
-    //         registered
-    //     });
-    // }
+    onRegistered(registered) {
+        this.setState({
+            registered
+        });
+    }
 
     onLoggedIn(authData) {
         console.log(authData);
@@ -79,6 +77,7 @@ export class MainView extends React.Component {
         this.setState({
           user: null
         });
+        window.open('/', '_self');
     }
 
     render() {
@@ -86,11 +85,10 @@ export class MainView extends React.Component {
 
         // if (!registered) return <RegistrationView onRegistered={registered => this.onRegistered(registered)} />;
         // if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
-        // if (movies.length === 0) return <div className="main-view" />;
 
         return (
           <Router>
-            <Menubar user={user}/>
+            <NavView user={user}/>
             <Container>
               <Row className="main-view justify-content-md-center">
                 <Route exact path='/' render={() => {

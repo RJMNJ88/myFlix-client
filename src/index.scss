@@ -15,16 +15,17 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 }
 
 html {
-  padding: 2rem;
+  padding: 0;
   scroll-behavior: smooth;
   background: $white;
 }
 
 .app-container {
+  min-height: 100vh;
   justify-content: center;
   background: $grey;
-  padding: 1.5rem;
+  padding-top: 7rem;
   border: .2rem solid $light-blue;
-  border-radius: 1.5rem;
+  // border-radius: 1.5rem;
 }
 

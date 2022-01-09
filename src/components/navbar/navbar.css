@@ -1,0 +1,52 @@
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  width: 100vw;
+  background: #81C3E3;
+  padding: .5rem 0;
+}
+
+.main-nav .navbar-logo {
+  color: #6D797F;
+  font-size: 2.5rem;
+}
+
+.main-nav .navbar-logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.main-nav .links {
+  color: #6D797F;
+  font-size: 1.5rem;
+}
+
+.main-nav .links .logout-btn {
+  font-size: 1rem;
+  color: #6D797F;
+  text-transform: capitalize;
+}
+
+.main-nav .links .logout-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.main-nav .links .user-btn {
+  color: #6D797F;
+}
+
+.main-nav .links .user-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+/*# sourceMappingURL=navbar.css.map */

@@ -12,11 +12,11 @@ export class ProfileView extends React.Component {
   constructor() {
     super();
     this.state = {
-      username: null,
-      password: null,
-      email: null,
-      birthday: null,
-      favorites: []
+      Username: null,
+      Password: null,
+      Email: null,
+      Birthday: null,
+      FavoriteMovies: []
     }; 
   }
 
@@ -65,7 +65,7 @@ export class ProfileView extends React.Component {
       Email: this.state.Email,
       Birthday: this.state.Birthday,
     },
-    {headers: { Authorization: `Bearer ${token}` }}
+    {headers: { Authorization: `Bearer ${token}` }})
     .then((response) => {
       this.setState({
         Username: response.data.Username,
@@ -82,14 +82,13 @@ export class ProfileView extends React.Component {
     .catch(function(error) {
       console.log(error);
     })
-  
   }
 
   removeFav() {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie.Title}`, {
+    axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
@@ -105,7 +104,7 @@ export class ProfileView extends React.Component {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/`, {
+    axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
@@ -144,25 +143,27 @@ export class ProfileView extends React.Component {
     return (
       <Container>
         <Row>
-          <Col>
+          <Col className='profile-col' >
             <Card className="profile">
-              <Card.Title>myProfile</Card.Title>
-              <Card.Text>
-                <div className="container">
-                  <div className="usernam">
-                    <span className="label">Username:</span>
-                    <span className="value">{Username}</span>
-                  </div>
-                  <div className="email">
-                    <span className="label">Email:</span>
-                    <span className="value">{Email}</span>
-                  </div>
-                  <div className="birthday">
-                    <span className="label">Birthday:</span>
-                    <span className="value">{Birthday}</span>
-                  </div>
-                </div>
-              </Card.Text>
+              <Card.Body className='profile-container'>
+                <Card.Title>myProfile</Card.Title>
+                <Card.Text className="username">
+                  <span className="label">Username:</span>
+                  <span className="value">{Username}</span>
+                </Card.Text>
+                <Card.Text className="email">
+                  <span className="label">Email:</span>
+                  <span className="value">{Email}</span>
+                </Card.Text>
+                <Card.Text className="birthday">
+                  <span className="label">Birthday:</span>
+                  <span className="value">{Birthday}</span>
+                </Card.Text>
+                <Card.Text className="image">
+                  
+                </Card.Text>
+              </Card.Body>
+              {/* <Card.Img className='profile-img' variant='bottom' crossOrigin='anonymous' src='https://images-na.ssl-images-amazon.com/images/I/61TP81VXAKL._AC_UL600_SR600,600_.jpg' /> */}
             </Card>
           </Col>
           <Col>
@@ -219,10 +220,10 @@ export class ProfileView extends React.Component {
                         onChange={(e) => this.setBirthday(e.target.value)}
                       />
                     </Form.Group>  
-                    <div className="btn">
-                      <Button className='update-btn' variant='warning' type='submit' onClick={this.editUser}>Update Profile</Button>
-                      <Button className='delete-btn' variant='danger' onClick={() => this.removeUser()}>Delete Profile</Button>
-                    </div>           
+                    <Form.Group className='edit-btns'>
+                      <Button className='update-btn' type='submit' onClick={this.editUser}>Update Profile</Button>
+                      <Button className='delete-btn' onClick={() => this.removeUser()}>Delete Profile</Button>
+                    </Form.Group>
                   </Form>
               </Card.Body>
             </Card>
@@ -234,24 +235,29 @@ export class ProfileView extends React.Component {
               {FavoriteMovies.length > 0 && movies.map((movie) => {
                 if(movie._id === FavoriteMovies.find((favorite) => favorite === movie._id)) {
                   return (
-                    <Card className='fav-card' key={movie._id}>
-                      <Card.Image
-                        className='fav-image'
-                        variant='top'
-                        src={movie.ImagePath}
-                      />
-                      <Card.Body>
-                        <Card.Title>{movie.Title}</Card.Title>
-                        <Button variant="danger" value={movie._id} onClick={(e) => this.removeFav(e, movie)}>Remove</Button>
-                      </Card.Body>
-                    </Card>
+                    <Row>
+                      <Col>
+                        <MovieCard />
+                      </Col>
+                    </Row>
+                    // <Card className='fav-card' key={movie._id}>
+                    //   <Card.Image
+                    //     className='fav-image'
+                    //     variant='top'
+                    //     src={movie.ImagePath}
+                    //   />
+                    //   <Card.Body>
+                    //     <Card.Title>{movie.Title}</Card.Title>
+                    //     <Button value={movie._id} onClick={(e) => this.removeFav(e, movie)}>Remove</Button>
+                    //   </Card.Body>
+                    // </Card>
                   )
                 }
               })}          
           </Col>
         </Row>
-        <div className="back-btn">
-          <Button onClick={() => { onBackClick(null); }}>Back</Button>
+        <div className="">
+          <Button className='back-btn' onClick={() => { onBackClick(null); }}>Back</Button>
         </div>
       </Container>
     )

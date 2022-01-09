@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import axios from "axios";
 import { Card, CardGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
@@ -6,10 +8,28 @@ import { Link } from "react-router-dom";
 
 export class MovieView extends React.Component {
 
-    render() {
-        const { movie, onBackClick } = this.props;
-        return (
+  constructor () {
+    super();
+  }
 
+  addFav() {
+    const username = localStorage.getItem("user");
+    const token = localStorage.getItem("token");
+
+    axios.post(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then((response) => {
+      alert('Movie Added to Favorites !')
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  }
+
+    render() {
+        const { movie, onBackClick, } = this.props;
+        return (
             <CardGroup className='view-card'>
                 <Card className='card'>
                     <Card.Body className='card-body'>
@@ -26,11 +46,11 @@ export class MovieView extends React.Component {
                             <Link to={`/directors/${movie.Director.Name}`}>
                                 <Button variant="link">Director</Button>
                             </Link>
-
                             <Link to={`/genres/${movie.Genre.Name}`}>
                                 <Button variant="link">Genre</Button>
                             </Link>
                             <Button className='movie-btn' onClick={() => { onBackClick(null); }}>Back</Button>
+                            <Button className="add-btn" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
                         </div>
                     </Card.Body>
                 </Card>
@@ -39,3 +59,18 @@ export class MovieView extends React.Component {
     }
     
 }
+
+MovieView.propTypes = {
+  movie: PropTypes.shape({
+      Title: PropTypes.string.isRequired,
+      Description: PropTypes.string.isRequired,
+      ImagePath: PropTypes.string.isRequired,
+      Director: PropTypes.shape({
+          Name: PropTypes.string.isRequired
+      }).isRequired,
+      Genre: PropTypes.shape({
+          Name: PropTypes.string.isRequired
+      }).isRequired
+  }).isRequired,
+}
+
