@@ -5,6 +5,8 @@
   background: #B7BBBC;
   height: 36rem;
   overflow-y: hidden;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 .movie-card:hover {
@@ -12,8 +14,6 @@
           transform: scale(1.025);
   -webkit-box-shadow: 0 0 3rem #FCFDFE;
           box-shadow: 0 0 3rem #FCFDFE;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .movie-card .card-img {

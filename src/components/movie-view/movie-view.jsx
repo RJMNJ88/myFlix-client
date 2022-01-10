@@ -12,15 +12,17 @@ export class MovieView extends React.Component {
     super();
   }
 
-  addFav() {
+  addFav(props) {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios.post(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {
-      headers: { Authorization: `Bearer ${token}` }
+    axios.post(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${this.props.movie._id}`,
+    {},
+    {
+    headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      alert('Movie Added to Favorites !')
+      alert('Movie Added to Favorites')
     })
     .catch(function(error) {
       console.log(error);

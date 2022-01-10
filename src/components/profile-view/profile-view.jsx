@@ -42,11 +42,11 @@ export class ProfileView extends React.Component {
       })
       .then((response) => {
         this.setState({
-          username: response.data.Username,
-          password: response.data.Password,
-          email: response.data.Email,
-          birthday: response.data.Birthday,
-          favorites: response.data.FavoriteMovies
+          Username: response.data.Username,
+          Password: response.data.Password,
+          Email: response.data.Email,
+          Birthday: response.data.Birthday,
+          FavoriteMovies: response.data.FavoriteMovies
         });
       })
       .catch(function (error) {
@@ -237,20 +237,9 @@ export class ProfileView extends React.Component {
                   return (
                     <Row>
                       <Col>
-                        <MovieCard />
+                        <MovieCard key={movie._id} movie={movie}/>
                       </Col>
                     </Row>
-                    // <Card className='fav-card' key={movie._id}>
-                    //   <Card.Image
-                    //     className='fav-image'
-                    //     variant='top'
-                    //     src={movie.ImagePath}
-                    //   />
-                    //   <Card.Body>
-                    //     <Card.Title>{movie.Title}</Card.Title>
-                    //     <Button value={movie._id} onClick={(e) => this.removeFav(e, movie)}>Remove</Button>
-                    //   </Card.Body>
-                    // </Card>
                   )
                 }
               })}          

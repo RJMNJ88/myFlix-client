@@ -14,6 +14,8 @@ $box-shadow-white: .5rem 1rem 1rem $white;
     background: $light-grey;
     height: 36rem;
     overflow-y: hidden;
+    transition: .25s ease-in-out;
+
     // max-height: 25rem;
     // min-height: 25rem;
     // overflow-y: hidden;
@@ -22,7 +24,6 @@ $box-shadow-white: .5rem 1rem 1rem $white;
     &:hover {
         transform: scale(1.025);
         box-shadow: 0 0 3rem $white;
-        transition: .2s linear;
     }
     
     .card-img {
