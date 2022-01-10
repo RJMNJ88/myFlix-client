@@ -5,3 +5,43 @@ $light-grey: #B7BBBC;
 $white: #FCFDFE;
 $border: .2rem solid black;
 $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
+
+.director-card {
+    margin: .5rem;
+    border: .2rem solid $light-grey;
+    border-radius: .5rem;
+    background: $white;
+}
+
+.dir-name {
+    border-top: .1rem dashed $light-grey;
+    border-bottom: .1rem dashed $light-grey;
+    padding: .5rem 0;
+}
+
+.dir-born {
+    border-bottom: .1rem dashed $light-grey;
+    padding: .5rem 0;
+}
+
+.dir-bio {
+    border-bottom: .1rem dashed $light-grey;
+    padding: .5rem 0;
+}
+
+.dir-films {
+    border-bottom: .1rem dashed $light-grey;
+    padding: .5rem 0;
+}
+
+.dir-btn {   
+    margin-top: .5rem;
+    color: $white;
+    background: $blue;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background: $blue;
+        opacity: 0.8;       
+    }    
+}

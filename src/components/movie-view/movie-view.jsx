@@ -45,14 +45,22 @@ export class MovieView extends React.Component {
                                 <span className="label">Description: </span>
                                 <span className="value">{movie.Description}</span>
                             </div>
-                            <Link to={`/directors/${movie.Director.Name}`}>
-                                <Button variant="link">Director</Button>
-                            </Link>
-                            <Link to={`/genres/${movie.Genre.Name}`}>
-                                <Button variant="link">Genre</Button>
-                            </Link>
-                            <Button className='movie-btn' onClick={() => { onBackClick(null); }}>Back</Button>
-                            <Button className="add-btn" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
+                            <div className='director-container'>
+                              <span>Director: </span>                              
+                              <Link to={`/directors/${movie.Director.Name}`}>
+                                <span variant="link">{movie.Director.Name}</span>
+                              </Link>                              
+                            </div>  
+                            <div className='genre-container'>
+                              <span>Genre: </span> 
+                              <Link to={`/genres/${movie.Genre.Name}`}>
+                                  <span variant="link">{movie.Genre.Name}</span>
+                              </Link>
+                            </div>  
+                            <div className='back-add-container'>
+                              <Button className='movie-back-btn' onClick={() => { onBackClick(null); }}>Back</Button>
+                              <Button className="add-btn" value={movie._id} onClick={(e) => this.addFav(e, movie)}>Add to Favorites</Button>
+                            </div>
                         </div>
                     </Card.Body>
                 </Card>

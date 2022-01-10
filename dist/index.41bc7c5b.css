@@ -1,5 +1,76 @@
-/* No CSS */
-/* No CSS */
+.director-card {
+  margin: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.dir-name {
+  border-top: 0.1rem dashed #B7BBBC;
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-born {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-bio {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-films {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-btn {
+  margin-top: .5rem;
+  color: #FCFDFE;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.dir-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+}
+
+.genre-card {
+  margin: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.genre-type {
+  margin-top: .5rem;
+  border-top: 0.1rem dashed #B7BBBC;
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.genre-descrip {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.genre-btn {
+  margin-top: .5rem;
+  color: #FCFDFE;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.genre-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+}
+
 .main-nav {
   position: fixed;
   top: 0;
@@ -14,13 +85,13 @@
 .main-nav .navbar-logo {
   color: #6D797F;
   font-size: 2.5rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .navbar-logo:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .main-nav .links {
@@ -32,17 +103,19 @@
   font-size: 1rem;
   color: #6D797F;
   text-transform: capitalize;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .links .logout-btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .main-nav .links .user-btn {
   color: #6D797F;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .links .user-btn:hover {
@@ -59,10 +132,38 @@
   background: #FCFDFE;
 }
 
+.profile .profile-title {
+  font-weight: bold;
+}
+
+.profile .label {
+  font-weight: bold;
+}
+
 .update-profile {
   border: 0.2rem solid #B7BBBC;
   border-radius: .5rem;
   background: #FCFDFE;
+}
+
+.update-profile .edit-profile-title {
+  font-weight: bold;
+}
+
+.user-label {
+  margin-top: .5rem;
+}
+
+.pass-label {
+  margin-top: .5rem;
+}
+
+.email-label {
+  margin-top: .5rem;
+}
+
+.birth-label {
+  margin-top: .5rem;
 }
 
 .edit-btns {
@@ -102,6 +203,9 @@
 }
 
 .back-btn {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
   margin-top: .5rem;
   background: #1977A5;
 }
@@ -111,6 +215,28 @@
   opacity: 0.8;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+}
+
+.remove-btn-container {
+  text-align: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.remove-btn-container .remove-btn {
+  color: #FCFDFE;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.remove-btn-container .remove-btn:hover {
+  text-decoration: underline;
+  color: #FFBC35;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");

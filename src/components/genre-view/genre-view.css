@@ -1,1 +1,32 @@
-/* No CSS *//*# sourceMappingURL=genre-view.css.map */
+.genre-card {
+  margin: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.genre-type {
+  margin-top: .5rem;
+  border-top: 0.1rem dashed #B7BBBC;
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.genre-descrip {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.genre-btn {
+  margin-top: .5rem;
+  color: #FCFDFE;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.genre-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=genre-view.css.map */

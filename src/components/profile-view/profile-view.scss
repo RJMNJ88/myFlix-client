@@ -8,15 +8,20 @@ $red: #C20000;
 $border: .2rem solid black;
 $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 
-// .profile-col {
-//     height: 10rem;
-// }
 
 .profile {
     margin-bottom: .5rem;
     border: .2rem solid $light-grey;
     border-radius: .5rem;
     background: $white;
+
+    .profile-title {
+        font-weight: bold;
+    }
+
+    .label {
+        font-weight: bold;
+    }
 }
 
 .update-profile {
@@ -24,7 +29,26 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
     border-radius: .5rem;
     background: $white;
 
+    .edit-profile-title {
+        font-weight: bold;
+    }
 
+}
+
+.user-label {
+    margin-top: .5rem;
+}
+
+.pass-label {
+    margin-top: .5rem;
+}
+
+.email-label {
+    margin-top: .5rem;
+}
+
+.birth-label {
+    margin-top: .5rem;
 }
 
 .edit-btns {
@@ -60,6 +84,9 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 }
 
 .back-btn {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
     margin-top: .5rem;
     background: $blue;
 
@@ -69,3 +96,24 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
         transition: all .2s ease;
     }  
 }
+
+.remove-btn-container {
+    text-align: right;
+    align-items: center;
+
+    .remove-btn {
+        color: $white;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        transition: .1s ease-in-out;
+
+        &:hover {
+            text-decoration: underline;
+            color: $yellow;
+        }
+    }
+}
+
+

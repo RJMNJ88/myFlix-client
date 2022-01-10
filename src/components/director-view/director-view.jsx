@@ -6,33 +6,33 @@ import "./director-view.css";
 
 export class DirectorView extends React.Component {
   render () {
-    const {Director, onBackClick } = this.props;
+    const {director, onBackClick } = this.props;
 
     return (
       <Container>
         <Row>
           <Col>
-            <Card>
+            <Card className="director-card">
               <Card.Body>
-                <Card.Img className='director-img' variant='top' src={Director.ImagePath} crossOrigin='anonymous' />
-                <div className="name">
+                <Card.Img className='director-img' variant='top' src={director.ImagePath} crossOrigin='anonymous' />
+                <div className="dir-name">
                   <span className="label">Name: </span>
-                  <span className="value">{Director.Name}</span>
+                  <span className="value">{director.Name}</span>
                 </div>
-                <div className="born">
+                <div className="dir-born">
                   <span className="label">Born: </span>
-                  <span className="value">{Director.Born}</span>
+                  <span className="value">{director.Born}</span>
                 </div>
-                <div className="bio">
+                <div className="dir-bio">
                   <span className="label">Bio: </span>
-                  <span className="value">{Director.Bio}</span>
+                  <span className="value">{director.Bio}</span>
                 </div>
-                <div className="films">
+                <div className="dir-films">
                   <span className="label">Popular Films: </span>
-                  <span className="value">{Director.PopularFilms}</span>
+                  <span className="value">{director.PopularFilms}</span>
                 </div>
-                <div className="backButton">
-                  <Button size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+                <div >
+                  <Button className="dir-btn" size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
                 </div>
               </Card.Body>
             </Card>
@@ -48,8 +48,9 @@ DirectorView.PropTypes = {
   Director: PropTypes.shape({
     Name: PropTypes.string,
     Born: PropTypes.string,
+    // Born: PropTypes.instanceOf(Date),
     Bio: PropTypes.string,
-    PopularFilms: PropTypes.array
-    // PopularFilms: PropTypes.arrayOf(PropTypes.string)
+    // PopularFilms: PropTypes.array
+    PopularFilms: PropTypes.arrayOf(PropTypes.string)
   })
 }

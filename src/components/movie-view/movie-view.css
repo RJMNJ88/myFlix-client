@@ -29,15 +29,46 @@
   font-weight: bold;
 }
 
-.movie-btn {
-  margin-top: .5rem;
-  background: #1977A5;
+.director-container {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
 }
 
-.movie-btn:hover {
+.director-container .label {
+  font-weight: bold;
+}
+
+.genre-container {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.genre-container .label {
+  font-weight: bold;
+}
+
+.back-add-container .movie-back-btn {
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.back-add-container .movie-back-btn:hover {
   background: #1977A5;
   opacity: 0.8;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+}
+
+.back-add-container .add-btn {
+  margin-top: .5rem;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.back-add-container .add-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=movie-view.css.map */

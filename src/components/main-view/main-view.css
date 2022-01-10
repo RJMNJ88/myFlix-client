@@ -3,4 +3,8 @@
       -ms-flex-align: last baseline;
           align-items: last baseline;
 }
+
+.main-view .cards {
+  margin-bottom: 2rem;
+}
 /*# sourceMappingURL=main-view.css.map */

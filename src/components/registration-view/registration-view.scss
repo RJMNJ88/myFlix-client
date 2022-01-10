@@ -13,31 +13,31 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 
 .reg-title {
     color: $blue;
+    transition: .2s ease-in-out;
     
     &:hover {
-        transform: translateX(1.5rem);
-        transition: all .2s ease;
+        transform: translateX(1.5rem);    
     }
 }
 
 .reg-label {
     margin-top: .5rem;
     color: $grey;
+    transition: .2s ease-in-out;
 
     &:hover {
-        transform: translateX(1.5rem);
-        transition: all .2s ease;    
+        transform: translateX(1.5rem);    
     }
 }
 
 .reg-btn {
     margin-top: .5rem;
     background: $blue;
+    transition: .2s ease-in-out;
 
     &:hover {
         background: $blue;
         opacity: 0.8;
-        transition: all .2s ease;
     }
 }
 

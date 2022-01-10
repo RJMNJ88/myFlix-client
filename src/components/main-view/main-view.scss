@@ -8,6 +8,10 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 
 .main-view {
     align-items: last baseline;
+    
+    .cards {
+        margin-bottom: 2rem;
+    }
 }
 
 // .cards {

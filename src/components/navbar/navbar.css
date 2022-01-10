@@ -12,13 +12,13 @@
 .main-nav .navbar-logo {
   color: #6D797F;
   font-size: 2.5rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .navbar-logo:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .main-nav .links {
@@ -30,17 +30,19 @@
   font-size: 1rem;
   color: #6D797F;
   text-transform: capitalize;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .links .logout-btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .main-nav .links .user-btn {
   color: #6D797F;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .main-nav .links .user-btn:hover {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, Container, Card, Row, Col, Form } from 'react-bootstrap';
+import { Button, Container, Card, Row, Col, Form, Figure } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 import { MovieCard } from '../movie-card/movie-card';
@@ -138,117 +138,142 @@ export class ProfileView extends React.Component {
 
   render() {
     const { movies, onBackClick, user} = this.props;
-    const { Username, Email, Birthday, FavoriteMovies } = this.state;
+    const { Username, Email, Birthday, FavoriteMovies, Title, ImagePath } = this.state;
 
     return (
-      <Container>
-        <Row>
-          <Col className='profile-col' >
-            <Card className="profile">
-              <Card.Body className='profile-container'>
-                <Card.Title>myProfile</Card.Title>
-                <Card.Text className="username">
-                  <span className="label">Username:</span>
-                  <span className="value">{Username}</span>
-                </Card.Text>
-                <Card.Text className="email">
-                  <span className="label">Email:</span>
-                  <span className="value">{Email}</span>
-                </Card.Text>
-                <Card.Text className="birthday">
-                  <span className="label">Birthday:</span>
-                  <span className="value">{Birthday}</span>
-                </Card.Text>
-                <Card.Text className="image">
-                  
-                </Card.Text>
-              </Card.Body>
-              {/* <Card.Img className='profile-img' variant='bottom' crossOrigin='anonymous' src='https://images-na.ssl-images-amazon.com/images/I/61TP81VXAKL._AC_UL600_SR600,600_.jpg' /> */}
-            </Card>
-          </Col>
-          <Col>
-            <Card className='update-profile'>
-              <Card.Body>
-                <Card.Title>Edit Profile</Card.Title>
-                  <Form
-                    className='update-form'
-                    onSubmit={(e) => {
-                      this.editUser(
-                        e,
-                        this.Username,
-                        this.Password,
-                        this.Email,
-                        this.Birthday
-                      )
-                    }}>
-                    <Form.Group>
-                      <Form.Label>Username:</Form.Label>
-                      <Form.Control
-                        type='text'
-                        name='Username'
-                        placeholder='Edit Username'
-                        onChange={(e) => this.setUsername(e.target.value)}
-                        required
-                      />
-                    </Form.Group> 
-                    <Form.Group>
-                      <Form.Label>Password:</Form.Label>
-                      <Form.Control
-                        type='password'
-                        name='Password'
-                        placeholder='Edit Password'
-                        onChange={(e) => this.setPassword(e.target.value)}
-                        required
-                      />
-                    </Form.Group> 
-                    <Form.Group>
-                      <Form.Label>Email:</Form.Label>
-                      <Form.Control
-                        type='email'
-                        name='Email'
-                        placeholder='Edit Email'
-                        onChange={(e) => this.setEmail(e.target.value)}
-                        required
-                      />
-                    </Form.Group>    
-                    <Form.Group>
-                      <Form.Label>Birthday:</Form.Label>
-                      <Form.Control
-                        type='date'
-                        name='Birthday'
-                        placeholder='Edit Birthday'
-                        onChange={(e) => this.setBirthday(e.target.value)}
-                      />
-                    </Form.Group>  
-                    <Form.Group className='edit-btns'>
-                      <Button className='update-btn' type='submit' onClick={this.editUser}>Update Profile</Button>
-                      <Button className='delete-btn' onClick={() => this.removeUser()}>Delete Profile</Button>
-                    </Form.Group>
-                  </Form>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-              {FavoriteMovies.length === 0 && (<div className='no-favs'>No Favorites Selected...</div>)}
-              {FavoriteMovies.length > 0 && movies.map((movie) => {
-                if(movie._id === FavoriteMovies.find((favorite) => favorite === movie._id)) {
-                  return (
-                    <Row>
-                      <Col>
-                        <MovieCard key={movie._id} movie={movie}/>
+      <>
+        <Container>
+          <Row>
+            <Col className='profile-col' >
+              <Card className="profile">
+                <Card.Body className='profile-container'>
+                  <Card.Title className='profile-title'>myProfile</Card.Title>
+                  <Card.Text className="username">
+                    <span className="label">Username: </span>
+                    <span className="value">{Username}</span>
+                  </Card.Text>
+                  <Card.Text className="email">
+                    <span className="label">Email: </span>
+                    <span className="value">{Email}</span>
+                  </Card.Text>
+                  <Card.Text className="birthday">
+                    <span className="label">Birthday: </span>
+                    <span className="value">{Birthday}</span>
+                  </Card.Text>
+                  <Card.Text className="image">
+                    
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className='update-profile'>
+                <Card.Body>
+                  <Card.Title className='edit-profile-title'>Edit Profile</Card.Title>
+                    <Form
+                      className='update-form'
+                      onSubmit={(e) => {
+                        this.editUser(
+                          e,
+                          this.Username,
+                          this.Password,
+                          this.Email,
+                          this.Birthday
+                        )
+                      }}>
+                      <Form.Group>
+                        <Form.Label className='user-label'>Username:</Form.Label>
+                        <Form.Control
+                          type='text'
+                          name='Username'
+                          placeholder='Edit Username'
+                          onChange={(e) => this.setUsername(e.target.value)}
+                          required
+                        />
+                      </Form.Group> 
+                      <Form.Group>
+                        <Form.Label className='pass-label'>Password:</Form.Label>
+                        <Form.Control
+                          type='password'
+                          name='Password'
+                          placeholder='Edit Password'
+                          onChange={(e) => this.setPassword(e.target.value)}
+                          required
+                        />
+                      </Form.Group> 
+                      <Form.Group>
+                        <Form.Label className='email-label'>Email:</Form.Label>
+                        <Form.Control
+                          type='email'
+                          name='Email'
+                          placeholder='Edit Email'
+                          onChange={(e) => this.setEmail(e.target.value)}
+                          required
+                        />
+                      </Form.Group>    
+                      <Form.Group>
+                        <Form.Label className='birth-label'>Birthday:</Form.Label>
+                        <Form.Control
+                          type='date'
+                          name='Birthday'
+                          placeholder='Edit Birthday'
+                          onChange={(e) => this.setBirthday(e.target.value)}
+                        />
+                      </Form.Group>  
+                      <Form.Group className='edit-btns'>
+                        <Button className='update-btn' type='submit' onClick={this.editUser}>Update Profile</Button>
+                        <Button className='delete-btn' onClick={() => this.removeUser()}>Delete Profile</Button>
+                      </Form.Group>
+                    </Form>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+        
+        <Container>
+          <Row className='justify-content-md-center'>
+            <Col>
+              myFavorites
+            </Col>
+          </Row>
+          <Row className='fav-row justify-content-md-center'>
+                {FavoriteMovies.length === 0 && (<div className='no-favs'>No Favorites Selected...</div>)}
+                {FavoriteMovies.length > 0 && movies.map((movie) => {
+                  if(movie._id === FavoriteMovies.find((favorite) => favorite === movie._id)) {
+                    return (    
+                      // <Row className='justify-content-md-center'>
+                      <Col className='fav-col'md={3} key={movie._id} movie={movie}> 
+                        {/* <Figure>
+                          <Link>
+                          <Figure.Image
+                            src={ImagePath}
+                          />
+                          <Figure.Caption>
+                            {Title}
+                          </Figure.Caption>
+                          </Link>
+                        </Figure> */}
+                        {/* <Button >Remove</Button> */}
+                       
+                          <MovieCard key={movie._id} movie={movie}/>
+                          <div className='remove-btn-container'>
+                            <Button className='remove-btn' onClick={() => {this.removeFav(movie._id)}}>(x)Remove</Button>
+                          </div>
+                       
                       </Col>
-                    </Row>
-                  )
-                }
-              })}          
-          </Col>
-        </Row>
+                      // </Row>
+                    )
+                  }
+                })}                     
+          </Row>
+        </Container>
+
         <div className="">
           <Button className='back-btn' onClick={() => { onBackClick(null); }}>Back</Button>
         </div>
-      </Container>
+        
+      </>
     )
   }
 

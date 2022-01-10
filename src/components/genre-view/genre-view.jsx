@@ -6,28 +6,30 @@ import "./genre-view.css";
 
 export class GenreView extends React.Component {
   render () {
-    const {Genre, onBackClick } = this.props;
+    const {genre, onBackClick } = this.props;
 
     return (
       <Container>
         <Row>
           <Col>
-            <Card>
+          
+            <Card className="genre-card">
               <Card.Body>
                 <Card.Img className='genre-img' variant='top' src='https://miro.medium.com/max/3840/1*jbfWuj3RSAAvmJeBwLWbsw.jpeg' crossOrigin='anonymous' />
-                <div className="type">
+                <div className="genre-type">
                   <span className="label">Type: </span>
-                  <span className="value">{Genre.Name}</span>
+                  <span className="value">{genre.Name}</span>
                 </div>
-                <div className="description">
+                <div className="genre-descrip">
                   <span className="label">Description: </span>
-                  <span className="value">{Genre.Description}</span>
+                  <span className="value">{genre.Description}</span>
                 </div>
-                <div className="backButton">
-                  <Button size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+                <div >
+                  <Button className="genre-btn" size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
                 </div>
               </Card.Body>
             </Card>
+            
           </Col>
         </Row>
         

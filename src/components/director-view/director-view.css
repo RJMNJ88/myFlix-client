@@ -1,1 +1,41 @@
-/* No CSS *//*# sourceMappingURL=director-view.css.map */
+.director-card {
+  margin: .5rem;
+  border: 0.2rem solid #B7BBBC;
+  border-radius: .5rem;
+  background: #FCFDFE;
+}
+
+.dir-name {
+  border-top: 0.1rem dashed #B7BBBC;
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-born {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-bio {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-films {
+  border-bottom: 0.1rem dashed #B7BBBC;
+  padding: .5rem 0;
+}
+
+.dir-btn {
+  margin-top: .5rem;
+  color: #FCFDFE;
+  background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.dir-btn:hover {
+  background: #1977A5;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=director-view.css.map */

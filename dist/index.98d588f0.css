@@ -5,37 +5,37 @@
 
 .reg-title {
   color: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .reg-title:hover {
   -webkit-transform: translateX(1.5rem);
           transform: translateX(1.5rem);
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
 }
 
 .reg-label {
   margin-top: .5rem;
   color: #6D797F;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .reg-label:hover {
   -webkit-transform: translateX(1.5rem);
           transform: translateX(1.5rem);
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
 }
 
 .reg-btn {
   margin-top: .5rem;
   background: #1977A5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .reg-btn:hover {
   background: #1977A5;
   opacity: 0.8;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
 }
 
 /*# sourceMappingURL=index.98d588f0.css.map */
