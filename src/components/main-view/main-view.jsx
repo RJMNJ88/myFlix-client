@@ -49,6 +49,20 @@ export class MainView extends React.Component {
         });
     }
 
+    getDirectors(token) {
+      axios.get('https://blooming-wildwood-80599.herokuapp.com/Directors', {
+        headers: { Authorization: `Bearer ${token}`}
+      })
+      .then(response => {
+        this.setState({
+          directors: response.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+
     setSelectedMovie(movie) {
         this.setState({
             selectedMovie: movie
@@ -81,7 +95,7 @@ export class MainView extends React.Component {
     }
 
     render() {
-        const { movies, user } = this.state;
+        const { movies, directors, user } = this.state;
 
         // if (!registered) return <RegistrationView onRegistered={registered => this.onRegistered(registered)} />;
         // if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
@@ -124,7 +138,8 @@ export class MainView extends React.Component {
                   </Col>
                   if (movies.length === 0) return <div className="main-view" />;
                   return <Col md={8}>
-                    <DirectorView director={movies.find(m => m.Director.Name === match.params.Name).Director} onBackClick={() => history.goBack()} />
+                    {/* <DirectorView director={movies.find(m => m.Director.Name === match.params.Name).Director} onBackClick={() => history.goBack()} /> */}
+                    <DirectorView director={directors.find(d => d.Name=== match.params.Name).Director} onBackClick={() => history.goBack()} />                    
                   </Col>
                 }} />
                 <Route path="/genres/:Name" render={({ match, history }) => {
