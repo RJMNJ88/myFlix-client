@@ -27,6 +27,7 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 
     .label {
         font-weight: bold;
+        margin-right: 0.2rem;
     }
 }
 
@@ -36,6 +37,7 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 
     .label {
         font-weight: bold;
+        margin-right: 0.2rem;
     }
 }
 
@@ -43,8 +45,9 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
 
-    .label {
+    .dir-span {
         font-weight: bold;
+        margin-right: 0.2rem;
     }
 }
 
@@ -52,8 +55,9 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
 
-    .label {
+    .genre-span {
         font-weight: bold;
+        margin-right: 0.2rem;
     }
 }
 

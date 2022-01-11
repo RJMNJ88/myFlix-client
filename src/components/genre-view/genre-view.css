@@ -6,15 +6,25 @@
 }
 
 .genre-type {
-  margin-top: .5rem;
+  margin-top: 1rem;
   border-top: 0.1rem dashed #B7BBBC;
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
 }
 
+.genre-type .label {
+  font-weight: bold;
+  margin-right: .2rem;
+}
+
 .genre-descrip {
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
+}
+
+.genre-descrip .label {
+  font-weight: bold;
+  margin-right: .2rem;
 }
 
 .genre-btn {

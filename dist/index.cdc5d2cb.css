@@ -18,6 +18,7 @@
 
 .movie-title .label {
   font-weight: bold;
+  margin-right: 0.2rem;
 }
 
 .movie-description {
@@ -27,6 +28,7 @@
 
 .movie-description .label {
   font-weight: bold;
+  margin-right: 0.2rem;
 }
 
 .director-container {
@@ -34,8 +36,9 @@
   padding: .5rem 0;
 }
 
-.director-container .label {
+.director-container .dir-span {
   font-weight: bold;
+  margin-right: 0.2rem;
 }
 
 .genre-container {
@@ -43,8 +46,9 @@
   padding: .5rem 0;
 }
 
-.genre-container .label {
+.genre-container .genre-span {
   font-weight: bold;
+  margin-right: 0.2rem;
 }
 
 .back-add-container .movie-back-btn {
