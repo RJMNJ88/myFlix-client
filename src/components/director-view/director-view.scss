@@ -14,24 +14,45 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
 }
 
 .dir-name {
+    margin-top: 1rem;
     border-top: .1rem dashed $light-grey;
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
+
+    .label {
+        font-weight: bold;
+        margin-right: .2rem;
+    }
 }
 
 .dir-born {
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
+
+    .label {
+        font-weight: bold;
+        margin-right: .2rem;
+    }
 }
 
 .dir-bio {
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
+
+    .label {
+        font-weight: bold;
+        margin-right: .2rem;
+    }
 }
 
 .dir-films {
     border-bottom: .1rem dashed $light-grey;
     padding: .5rem 0;
+
+    .label {
+        font-weight: bold;
+        margin-right: .2rem;
+    }
 }
 
 .dir-btn {   
@@ -45,3 +66,4 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
         opacity: 0.8;       
     }    
 }
+

@@ -60,6 +60,28 @@
   transition: all .2s ease;
 }
 
+.fav-container {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: .7rem 0;
+  border: 0.2rem dashed #FCFDFE;
+  border-radius: 1rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.fav-container:hover .fav-header {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.fav-container .fav-header {
+  font-weight: bold;
+  color: #FCFDFE;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
 .delete-btn {
   width: 9rem;
   margin-top: .5rem;

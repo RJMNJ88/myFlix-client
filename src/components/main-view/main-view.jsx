@@ -20,6 +20,7 @@ export class MainView extends React.Component {
         super();
         this.state = {
             movies: [],
+            directors: [],
             user: null,
         };
     }
@@ -31,6 +32,7 @@ export class MainView extends React.Component {
             user: localStorage.getItem('user')
           });
           this.getMovies(accessToken);
+          this.getDirectors(accessToken);
         }
     }
 
@@ -83,6 +85,7 @@ export class MainView extends React.Component {
         localStorage.setItem('token', authData.token);
         localStorage.setItem('user', authData.user.Username);
         this.getMovies(authData.token);
+        this.getDirectors(authData.token);
     }
 
     onLoggedOut() {
@@ -139,7 +142,7 @@ export class MainView extends React.Component {
                   if (movies.length === 0) return <div className="main-view" />;
                   return <Col md={8}>
                     {/* <DirectorView director={movies.find(m => m.Director.Name === match.params.Name).Director} onBackClick={() => history.goBack()} /> */}
-                    <DirectorView director={directors.find(d => d.Name === match.params.Name).Director} onBackClick={() => history.goBack()} />                    
+                    <DirectorView director={directors.find(d => d.Name === match.params.Name)} onBackClick={() => history.goBack()} />                    
                   </Col>
                 }} />
                 <Route path="/genres/:Name" render={({ match, history }) => {

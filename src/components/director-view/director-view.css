@@ -6,9 +6,15 @@
 }
 
 .dir-name {
+  margin-top: 1rem;
   border-top: 0.1rem dashed #B7BBBC;
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
+}
+
+.dir-name .label {
+  font-weight: bold;
+  margin-right: .2rem;
 }
 
 .dir-born {
@@ -16,14 +22,29 @@
   padding: .5rem 0;
 }
 
+.dir-born .label {
+  font-weight: bold;
+  margin-right: .2rem;
+}
+
 .dir-bio {
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
 }
 
+.dir-bio .label {
+  font-weight: bold;
+  margin-right: .2rem;
+}
+
 .dir-films {
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
+}
+
+.dir-films .label {
+  font-weight: bold;
+  margin-right: .2rem;
 }
 
 .dir-btn {

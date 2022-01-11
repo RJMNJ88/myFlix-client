@@ -29,7 +29,9 @@ export class DirectorView extends React.Component {
                 </div>
                 <div className="dir-films">
                   <span className="label">Popular Films: </span>
-                  <span className="value">{director.PopularFilms}</span>
+                  <span className="value">{director.PopularFilms[0] + ", "}</span>
+                  <span className="value">{director.PopularFilms[1] + ", "}</span>
+                  <span className="value">{director.PopularFilms[2]}</span>
                 </div>
                 <div >
                   <Button className="dir-btn" size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
@@ -47,10 +49,10 @@ export class DirectorView extends React.Component {
 DirectorView.PropTypes = {
   Director: PropTypes.shape({
     Name: PropTypes.string,
-    Born: PropTypes.string,
-    // Born: PropTypes.instanceOf(Date),
+    // Born: PropTypes.string,
+    Born: PropTypes.instanceOf(Date),
     Bio: PropTypes.string,
-    // PopularFilms: PropTypes.array
-    PopularFilms: PropTypes.arrayOf(PropTypes.string)
+    PopularFilms: PropTypes.array
+    // PopularFilms: PropTypes.arrayOf(PropTypes.string)
   })
 }

@@ -232,11 +232,14 @@ export class ProfileView extends React.Component {
         </Container>
         
         <Container>
-          <Row className='justify-content-md-center'>
+          {/* <Row className='justify-content-md-center'>
             <Col>
               myFavorites
             </Col>
-          </Row>
+          </Row> */}          
+          <div className='fav-container'>
+            <h3 className='fav-header'>myFavorites</h3>
+          </div>
           <Row className='fav-row justify-content-md-center'>
                 {FavoriteMovies.length === 0 && (<div className='no-favs'>No Favorites Selected...</div>)}
                 {FavoriteMovies.length > 0 && movies.map((movie) => {

@@ -69,6 +69,25 @@ $box-shadow: .5rem 1rem 1rem rgba(0,0,0,.1);
     }
 }
 
+.fav-container {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: .7rem 0;
+    border: .2rem dashed $white;
+    border-radius: 1rem;
+    transition: .2s ease-in-out;
+    
+    &:hover .fav-header {
+        transform: scale(1.15);
+    }
+
+    .fav-header {
+        font-weight: bold;
+        color: $white;
+        transition: .2s ease-in-out;
+    }
+}
+
 .delete-btn {
     width: 9rem;
     margin-top: .5rem;

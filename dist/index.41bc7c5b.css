@@ -6,9 +6,15 @@
 }
 
 .dir-name {
+  margin-top: 1rem;
   border-top: 0.1rem dashed #B7BBBC;
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
+}
+
+.dir-name .label {
+  font-weight: bold;
+  margin-right: .2rem;
 }
 
 .dir-born {
@@ -16,14 +22,29 @@
   padding: .5rem 0;
 }
 
+.dir-born .label {
+  font-weight: bold;
+  margin-right: .2rem;
+}
+
 .dir-bio {
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
 }
 
+.dir-bio .label {
+  font-weight: bold;
+  margin-right: .2rem;
+}
+
 .dir-films {
   border-bottom: 0.1rem dashed #B7BBBC;
   padding: .5rem 0;
+}
+
+.dir-films .label {
+  font-weight: bold;
+  margin-right: .2rem;
 }
 
 .dir-btn {
@@ -195,6 +216,28 @@
   opacity: 0.8;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+}
+
+.fav-container {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: .7rem 0;
+  border: 0.2rem dashed #FCFDFE;
+  border-radius: 1rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.fav-container:hover .fav-header {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.fav-container .fav-header {
+  font-weight: bold;
+  color: #FCFDFE;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .delete-btn {
