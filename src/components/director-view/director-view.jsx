@@ -53,6 +53,5 @@ DirectorView.PropTypes = {
     Born: PropTypes.instanceOf(Date),
     Bio: PropTypes.string,
     PopularFilms: PropTypes.array
-    // PopularFilms: PropTypes.arrayOf(PropTypes.string)
   })
 }
