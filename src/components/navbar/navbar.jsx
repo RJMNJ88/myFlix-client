@@ -6,7 +6,12 @@ import './navbar.css'
 
 export function NavView({user}) {
 
-  const onLoggedOut = () => {
+  // const onLoggedOut = () => {
+  //   localStorage.clear();
+  //   window.open('/', '_self')
+  // }
+
+  onLoggedOut = () => {
     localStorage.clear();
     window.open('/', '_self')
   }
@@ -30,7 +35,8 @@ export function NavView({user}) {
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className="links ml-auto" >
               {isAuth() && (<Nav.Link className="user-btn" href={`/users/${user}`}>{user}</Nav.Link>)}
-              {isAuth() && (<Button className="logout-btn" variant='btn' onClick={() => {this.onLoggedOut()}}>logout</Button>)}
+              {/* {isAuth() && (<Button className="logout-btn" variant='btn' onClick={() => {this.onLoggedOut()}}>logout</Button>)} */}
+              {isAuth() && (<Button className="logout-btn" variant='btn' onClick={this.onLoggedOut}>logout</Button>)}
               {!isAuth() && (<Nav.Link href="/">sign-in</Nav.Link>)}
               {!isAuth() && (<Nav.Link href="/register">sign-up</Nav.Link>)}
             </Nav>

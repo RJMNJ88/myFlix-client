@@ -954,29 +954,27 @@ var _reducersDefault = parcelHelpers.interopDefault(_reducers);
 var _reduxDevtoolsExtension = require("redux-devtools-extension");
 var _mainView = require("./components/main-view/main-view");
 var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
-// Import statement to indicate that you need to bundle `./index.scss`
 var _indexScss = require("./index.scss");
 const store = _redux.createStore(_reducersDefault.default, _reduxDevtoolsExtension.devToolsEnhancer());
-// Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRedux.Provider, {
             store: store,
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 20
+                lineNumber: 18
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_containerDefault.default, {
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 21
+                    lineNumber: 19
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_mainViewDefault.default, {
                     __source: {
                         fileName: "src/index.jsx",
-                        lineNumber: 22
+                        lineNumber: 20
                     },
                     __self: this
                 })
@@ -40712,7 +40710,11 @@ var _navbarToggle = require("react-bootstrap/esm/NavbarToggle");
 var _navbarToggleDefault = parcelHelpers.interopDefault(_navbarToggle);
 var _navbarCss = require("./navbar.css");
 function NavView({ user  }) {
-    const onLoggedOut = ()=>{
+    // const onLoggedOut = () => {
+    //   localStorage.clear();
+    //   window.open('/', '_self')
+    // }
+    onLoggedOut = ()=>{
         localStorage.clear();
         window.open('/', '_self');
     };
@@ -40726,13 +40728,13 @@ function NavView({ user  }) {
         fixed: "top",
         __source: {
             fileName: "src/components/navbar/navbar.jsx",
-            lineNumber: 26
+            lineNumber: 31
         },
         __self: this,
         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
             __source: {
                 fileName: "src/components/navbar/navbar.jsx",
-                lineNumber: 27
+                lineNumber: 32
             },
             __self: this,
             children: [
@@ -40741,7 +40743,7 @@ function NavView({ user  }) {
                     href: "/",
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 28
+                        lineNumber: 33
                     },
                     __self: this,
                     children: "myFilms"
@@ -40750,7 +40752,7 @@ function NavView({ user  }) {
                     "aria-controls": "responsive-navbar-nav",
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 29
+                        lineNumber: 34
                     },
                     __self: this
                 }),
@@ -40758,14 +40760,14 @@ function NavView({ user  }) {
                     id: "responsive-navbar-nav",
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 30
+                        lineNumber: 35
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Nav, {
                         className: "links ml-auto",
                         __source: {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 31
+                            lineNumber: 36
                         },
                         __self: this,
                         children: [
@@ -40774,7 +40776,7 @@ function NavView({ user  }) {
                                 href: `/users/${user}`,
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 32
+                                    lineNumber: 37
                                 },
                                 __self: this,
                                 children: user
@@ -40782,12 +40784,10 @@ function NavView({ user  }) {
                             isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                 className: "logout-btn",
                                 variant: "btn",
-                                onClick: ()=>{
-                                    this.onLoggedOut();
-                                },
+                                onClick: this.onLoggedOut,
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 33
+                                    lineNumber: 39
                                 },
                                 __self: this,
                                 children: "logout"
@@ -40796,7 +40796,7 @@ function NavView({ user  }) {
                                 href: "/",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 34
+                                    lineNumber: 40
                                 },
                                 __self: this,
                                 children: "sign-in"
@@ -40805,7 +40805,7 @@ function NavView({ user  }) {
                                 href: "/register",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 35
+                                    lineNumber: 41
                                 },
                                 __self: this,
                                 children: "sign-up"
