@@ -84,11 +84,13 @@ export class ProfileView extends React.Component {
     })
   }
 
-  removeFav(movie) {
+  removeFav(e, movies) {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {
+    // axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movies._id}`, {
+      axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/:_id`, {
+
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
