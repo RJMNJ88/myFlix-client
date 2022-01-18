@@ -40916,7 +40916,7 @@ class ProfileView extends _reactDefault.default.Component {
             console.log(error);
         });
     };
-    removeFav() {
+    removeFav(movie) {
         const username = localStorage.getItem("user");
         const token = localStorage.getItem("token");
         _axiosDefault.default.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {

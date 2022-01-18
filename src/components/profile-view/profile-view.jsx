@@ -84,7 +84,7 @@ export class ProfileView extends React.Component {
     })
   }
 
-  removeFav() {
+  removeFav(movie) {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
