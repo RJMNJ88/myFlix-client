@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Button, Form, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
+
 
 import axios from 'axios';
 

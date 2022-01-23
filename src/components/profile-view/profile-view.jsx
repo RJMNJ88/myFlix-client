@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Button, Container, Card, Row, Col, Form, Figure } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-
 import { MovieCard } from '../movie-card/movie-card';
+import { setUser, updateUser } from "../../actions/actions";
+import { connect } from "react-redux";
 
 import './profile-view.css';
 
@@ -59,7 +60,7 @@ export class ProfileView extends React.Component {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios.get(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}`, {
+    axios.put(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}`, {
       Username: this.state.Username,
       Password: this.state.Password,
       Email: this.state.Email,
@@ -76,26 +77,26 @@ export class ProfileView extends React.Component {
 
       localStorage.setItem('user', this.state.Username);
       const data = response.data;
-      alert("Profile is updated!");
-      window.open(`/users/${username}`, "_self");
+      alert("Profile has been updated!");
+      window.location.reload();
     })
     .catch(function(error) {
       console.log(error);
     })
   }
 
-  removeFav(e, movies) {
+  removeFav(movie) {
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
     // axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movies._id}`, {
-      axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/:_id`, {
+      axios.delete(`https://blooming-wildwood-80599.herokuapp.com/Users/${username}/Movies/${movie._id}`, {
 
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
       console.log(response);
-      this.componentDidMount();
+      window.location.reload();
     })
     .catch(function(error) {
       console.log(error);
@@ -263,7 +264,7 @@ export class ProfileView extends React.Component {
                        
                           <MovieCard key={movie._id} movie={movie}/>
                           <div className='remove-btn-container'>
-                            <Button className='remove-btn' onClick={() => {this.removeFav(movie._id)}}>(x)Remove</Button>
+                            <Button className='remove-btn' onClick={() => {this.removeFav(movie)}}>(x)Remove</Button>
                           </div>
                        
                       </Col>
@@ -284,3 +285,12 @@ export class ProfileView extends React.Component {
 
 
 }
+
+let mapStateToProps = (state) => {
+  return {
+      user: state.user,
+      movies: state.movies
+  };
+};
+
+export default connect(mapStateToProps, { setUser, updateUser })(ProfileView);

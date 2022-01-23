@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import axios from "axios";
-import { Card, CardGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-
+import { Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 export class MovieView extends React.Component {
@@ -83,4 +81,3 @@ MovieView.propTypes = {
       }).isRequired
   }).isRequired,
 }
-
