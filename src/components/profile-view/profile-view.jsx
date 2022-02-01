@@ -42,13 +42,14 @@ export class ProfileView extends React.Component {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        this.setState({
-          Username: response.data.Username,
-          Password: response.data.Password,
-          Email: response.data.Email,
-          Birthday: response.data.Birthday,
-          FavoriteMovies: response.data.FavoriteMovies
-        });
+        this.props.setUser(response.data)
+        // this.setState({
+        //   Username: response.data.Username,
+        //   Password: response.data.Password,
+        //   Email: response.data.Email,
+        //   Birthday: response.data.Birthday,
+        //   FavoriteMovies: response.data.FavoriteMovies
+        // });
       })
       .catch(function (error) {
         console.log(error);
@@ -68,17 +69,17 @@ export class ProfileView extends React.Component {
     },
     {headers: { Authorization: `Bearer ${token}` }})
     .then((response) => {
-      this.setState({
-        Username: response.data.Username,
-        Password: response.data.Password,
-        Email: response.data.Email,
-        Birthday: response.data.Birthday
-      });
+      this.props.setUser(response.data)
+      // this.setState({
+      //   Username: response.data.Username,
+      //   Password: response.data.Password,
+      //   Email: response.data.Email,
+      //   Birthday: response.data.Birthday
+      // });
 
       localStorage.setItem('user', this.state.Username);
-      const data = response.data;
+      // const data = response.data;
       alert("Profile has been updated!");
-      window.location.reload();
     })
     .catch(function(error) {
       console.log(error);
@@ -95,8 +96,8 @@ export class ProfileView extends React.Component {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
+      this.props.setUser(response.data)
       console.log(response);
-      window.location.reload();
     })
     .catch(function(error) {
       console.log(error);
@@ -140,8 +141,10 @@ export class ProfileView extends React.Component {
   }
 
   render() {
-    const { movies, onBackClick, user} = this.props;
-    const { Username, Email, Birthday, FavoriteMovies } = this.state;
+    // const { movies, onBackClick, user} = this.props;
+    // const { Username, Email, Birthday, FavoriteMovies } = this.state;
+    const { movies, onBackClick} = this.props;
+    const { Username, Email, Birthday, FavoriteMovies } = this.props.user;
 
     return (
       <>
